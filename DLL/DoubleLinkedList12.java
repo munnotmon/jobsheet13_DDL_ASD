@@ -58,8 +58,13 @@ public class DoubleLinkedList12 {
         System.out.println("Node berhasil disisipkan setelah NIM " + keyNim);  
     }
 
-    public void print () {
+    public void print() {
+        if (isEmpty()) {
+            System.out.println("Linked list masih kosong!");
+            return;
+        }
         Node12 current = head;
+        System.out.println("Isi Linked List:");
         while (current != null) {
             current.data.tampil();
             current = current.next;
