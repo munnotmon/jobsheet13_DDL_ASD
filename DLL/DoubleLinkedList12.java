@@ -76,26 +76,32 @@ public class DoubleLinkedList12 {
             System.out.println("List kosong, tidak bisa dihapus.");
             return;
         } 
+        Mahasiswa12 dataTerhapus = head.data;
         if (head == tail) {
             head = tail = null;
         } else {
             head = head.next;
             head.prev = null;
         }
+        System.out.println("Data sudah berhasil dihapus. Data yang terhapus adalah:");
+        dataTerhapus.tampil();
     }
-
+    
     public void removeLast() {
         if (isEmpty()) {
             System.out.println("List kosong, tidak bisa dihapus.");
             return;
         } 
+        Mahasiswa12 dataTerhapus = tail.data; 
         if (head == tail) {
             head = tail = null;
         } else {
             tail = tail.prev;
             tail.next = null;
         }
-    }
+        System.out.println("Data sudah berhasil dihapus. Data yang terhapus adalah:");
+        dataTerhapus.tampil();
+    }  
 
     public Node12 search(String nim) {
         Node12 current = head;
