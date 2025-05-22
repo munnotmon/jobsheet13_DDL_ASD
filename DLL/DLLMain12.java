@@ -14,7 +14,7 @@ import java.util.Scanner;
                 System.out.println("3. Hapus di awal");
                 System.out.println("4. Hapus di akhir");
                 System.out.println("5. Tampilkan data");
-                System.out.println("6. Cari mahasiswa berdasarkan NIM");
+                System.out.println("7. Cari mahasiswa berdasarkan NIM");
                 System.out.println("0. Keluar");
                 System.out.print("Pilih menu: ");
                 pilihan = scan12.nextInt();
