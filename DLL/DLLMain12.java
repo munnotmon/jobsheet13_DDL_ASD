@@ -14,6 +14,7 @@ import java.util.Scanner;
                 System.out.println("3. Hapus di awal");
                 System.out.println("4. Hapus di akhir");
                 System.out.println("5. Tampilkan data");
+                System.out.println("6. Tambah data setelah NIM tertentu");
                 System.out.println("7. Cari mahasiswa berdasarkan NIM");
                 System.out.println("0. Keluar");
                 System.out.print("Pilih menu: ");
@@ -33,6 +34,12 @@ import java.util.Scanner;
                 case 4 -> list.removeLast();
                 case 5 -> list.print();
                 case 6 -> {
+                    System.out.print("Masukkan NIM yang ingin disisipkan setelahnya: ");
+                    String keyNim = scan12.nextLine();
+                    Mahasiswa12 mhs = Mahasiswa12.inputMahasiswa12(scan12);
+                    list.insertAfter(keyNim, mhs);
+                }
+                case 7 -> {
                     System.out.print("Masukkan NIM yang dicari: ");
                     String nim = scan12.nextLine();
                     Node12 found = list.search(nim);
